@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="900578bd-41f6-46ab-8813-8dbc3f2b71f7">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="4"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#E6BF73">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6DECF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#6495ED">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFD6FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="f62a5d2e-3c59-4c72-8b55-2481b8c86ff2"/>
+	<subDataset name="cotiza" uuid="c432724a-05b4-4863-a9ee-2ea92ce71db8">
+		<queryString>
+			<![CDATA[SELECT
+     tbl_cotizaciones.`id_cotizacion` AS tbl_cotizaciones_id_cotizacion,
+     detallecotizacion.`empresa` AS detallecotizacion_empresa,
+     detallecotizacion.`telefono` AS detallecotizacion_telefono,
+     detallecotizacion.`correo` AS detallecotizacion_correo,
+     detallecotizacion.`cliente` AS detallecotizacion_cliente,
+     tbl_cotizaciones.`cliente` AS tbl_cotizaciones_cliente,
+     DATE_FORMAT(tbl_cotizaciones.`fecha_cotizacion`, "%d/%m/%Y"),
+     tbl_cotizaciones.`monto` AS tbl_cotizaciones_monto
+FROM
+     `detallecotizacion` detallecotizacion,
+     `tbl_cotizaciones` tbl_cotizaciones
+WHERE
+     cotizacion = id_cotizacion]]>
+		</queryString>
+		<field name="tbl_cotizaciones_id_cotizacion" class="java.lang.String"/>
+		<field name="detallecotizacion_empresa" class="java.lang.String"/>
+		<field name="detallecotizacion_telefono" class="java.lang.String"/>
+		<field name="detallecotizacion_correo" class="java.lang.String"/>
+		<field name="detallecotizacion_cliente" class="java.lang.String"/>
+		<field name="tbl_cotizaciones_cliente" class="java.lang.String"/>
+		<field name="DATE_FORMAT(tbl_cotizaciones.`fecha_cotizacion`, &quot;%d/%m/%Y&quot;)" class="java.lang.String"/>
+		<field name="tbl_cotizaciones_monto" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="numcotiza" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{numcotiza}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+*,DATE_FORMAT(tbl_cotizaciones.`fecha_cotizacion`, "%d/%m/%Y") as fecha
+FROM
+     `detallecotizacion` detallecotizacion,
+     `tbl_cotizaciones` tbl_cotizaciones
+WHERE
+     cotizacion = id_cotizacion and
+cotizacion =$P{numcotiza}]]>
+	</queryString>
+	<field name="cotizacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="impuesto" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_cotizacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_cotizacion" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String"/>
+	<variable name="precio_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="166" splitType="Stretch">
+			<image>
+				<reportElement x="3" y="2" width="550" height="159" uuid="ab0a75ed-14f9-4b4c-8092-27a4ca2f5d8e"/>
+				<imageExpression><![CDATA["C:\\wamp\\www\\AppCotizaciones\\Theme\\reports\\anmar.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="430" y="45" width="109" height="30" uuid="106bcbea-393c-4926-ba5a-4f9dd0876098"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="430" y="14" width="109" height="31" backcolor="#0066CC" uuid="984ef6fd-9337-4c01-8a9b-380950c757e5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="434" y="51" width="100" height="20" uuid="de70f521-cc93-48e3-912f-c5cc4faabede"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cotizacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="433" y="22" width="103" height="16" forecolor="#FFFFFF" backcolor="#0099CC" uuid="249fa282-97da-4300-8b90-b78f2f5090a5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[# Cotizacion:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="132" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="3" y="3" width="550" height="129" uuid="b92eb649-1c86-4173-a8d5-98d70f464986"/>
+			</rectangle>
+			<textField>
+				<reportElement x="77" y="18" width="297" height="20" uuid="58f0d864-0294-4383-8009-c6dae618269e"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="61" width="297" height="20" uuid="3fb93267-b909-432e-b90e-8ad077bb53ca"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="104" width="177" height="20" uuid="3fcba493-d297-42c1-ae54-7b14deb51c1c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="104" width="221" height="20" uuid="81b1e1cd-fad2-487b-88ea-5f5d1f11887a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="18" width="64" height="20" uuid="9efbfaf4-0a90-4b08-affc-5efd764b15a3"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="61" width="64" height="20" uuid="3f2c7e04-cc97-44ad-aa83-f0685eabbc6c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="104" width="63" height="20" uuid="05866753-3cd7-4dfe-80d5-1763fd9b59da"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="104" width="49" height="20" uuid="1ae03a58-dcb4-4334-a2a5-06c119aa7ba4"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Correo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="17" width="80" height="21" forecolor="#000000" uuid="91b40956-5f7a-473a-a5ef-0cc40aa84351"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Fecha : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="459" y="18" width="100" height="20" uuid="3705c21a-59be-4d15-a438-72221e6e46ee"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="17" width="555" height="31" backcolor="#0066CC" uuid="066057ee-a78d-493c-a689-258e34d2a96c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="f4498258-1a85-4b4e-8dc7-538d395cda9a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="4639387d-2d82-4d7d-a545-4c3b2144ba29"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="89cf0bc3-46fd-44fc-b149-508c8c1a803a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="3" width="100" height="20" uuid="6b79ae0c-2cc8-439b-8ea0-94a69db00308"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="3" width="100" height="20" uuid="ccf05be2-cf60-457f-b916-75fe1209bb93"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="449" y="3" width="100" height="20" uuid="37a39fdd-761c-408c-aa63-6e4d93248ac1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="89" splitType="Stretch">
+			<textField pattern="###0.00">
+				<reportElement x="452" y="37" width="100" height="20" uuid="cff18bf3-7fa3-4d35-8e48-6726ba3e795a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{impuesto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="452" y="67" width="100" height="20" uuid="5af54c4d-9c5b-464c-af9d-08f0d32444a9"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="902b3c4a-77bc-4ff0-95f2-2efbd91bc047"/>
+			</line>
+			<staticText>
+				<reportElement x="371" y="37" width="75" height="20" uuid="45c0964a-b71f-47cd-b838-37dd999f9c13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[ITBMS :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="67" width="75" height="20" uuid="9f33bf08-6742-4800-8e47-a6cf542d69be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="7" width="75" height="20" uuid="e47b2bdc-ca61-4c61-ab6f-8ac5103e0df7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Subtotal :]]></text>
+			</staticText>
+			<textField pattern="###0.00">
+				<reportElement x="452" y="7" width="100" height="20" uuid="f676a00c-e66d-4dbb-a319-1a6ad6b8a492"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{precio_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
