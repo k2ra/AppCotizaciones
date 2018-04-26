@@ -270,29 +270,29 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
+    <script src="views/assets/js/jquery.js"></script>
+    <script src="views/assets/js/jquery-1.8.3.min.js"></script>
+    <script src="views/assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="views/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="views/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="views/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="views/assets/js/jquery.sparkline.js"></script>
 
 
     <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+    <script src="views/assets/js/common-scripts.js"></script>
     
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+    <script type="text/javascript" src="views/assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="views/assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-	<script src="assets/js/zabuto_calendar.js"></script>
-	<script src="assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.js"></script>
-	<script src="assets/plugins/DataTables-1.10.12/media/js/sum().js"></script>
-    <script src="assets/plugins/DataTables-1.10.12/media/js/dataTables.bootstrap.js"></script>	
-	<script src="assets/plugins/datepicker/js/bootstrap-datepicker.js"></script>
-	<script src="assets/js/jqBootstrapValidation.js"></script>
+    <script src="views/assets/js/sparkline-chart.js"></script>    
+	<script src="views/assets/js/zabuto_calendar.js"></script>
+	<script src="views/assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.js"></script>
+	<script src="views/assets/plugins/DataTables-1.10.12/media/js/sum().js"></script>
+    <script src="views/assets/plugins/DataTables-1.10.12/media/js/dataTables.bootstrap.js"></script>	
+	<script src="views/assets/plugins/datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="views/assets/js/jqBootstrapValidation.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/locales/bootstrap-datepicker.es.min.js"></script>-->
   	<script type="text/javascript" src="views/app/js/nuevacotizacion.js"></script>
   	<script type="text/javascript" src="views/app/js/nuevocliente.js"></script>

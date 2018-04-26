@@ -4,7 +4,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="?view=cotizacionAdd&mode=dashboard"><img src="img/Icon-user.png" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="?view=cotizacionAdd&mode=dashboard"><img src="views/app/img/Icon-user.png" class="img-circle" width="60"></a></p>
               	  <h5 class="centered"><?php echo $_SESSION['user'];?></h5>
               	  	
                   <li class="mt">

@@ -132,7 +132,7 @@ class cotizacion{
    				echo "Error: " . $query . "<br>" . mysqli_error($this->connect);
 			}*/
 
-			$result = $this->db->query($this->$query);
+			$result = $this->db->query($query);
 
 				if ($result) {
 				    // output data of each row

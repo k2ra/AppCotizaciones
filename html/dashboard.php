@@ -65,20 +65,21 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="views/assets/js/jquery.js"></script>
+    <script src="views/assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="views/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="views/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="views/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
 
 
     <!--common script for all pages-->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-	<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-    <script src="assets/js/common-scripts.js"></script>
+	
+    <script src="views/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/morris-conf.js"></script>
+    <script type="text/javascript" src="assets/js/chart-master/Chart.js"></script>
+    <script src="views/assets/js/chartjs-conf.js"></script>
     
   <script>
       //custom select box

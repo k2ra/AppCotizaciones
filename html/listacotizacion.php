@@ -1,5 +1,5 @@
 <?php include(HTML_DIR . 'component/header.php'); ?>
-
+  <link rel="stylesheet" type="text/css" href="views/app/css/adicional.css">
   <body>
 
   <section id="container" >
@@ -97,10 +97,10 @@
     <script src="views/assets/plugins/DataTables-1.10.12/media/js/dataTables.bootstrap.js"></script> 
     <script type="text/javascript" src="views/assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="views/assets/js/gritter-conf.js"></script>
-    <script type="text/javascript" src="views/app/js/listacotizaciones.js"></script>
     <script type="text/javascript" src="views/app/js/menu.js"></script>
     <!--script for this page-->
     <script src="views/assets/js/sparkline-chart.js"></script>    
-	<script src="views/assets/js/zabuto_calendar.js"></script>	
+  <script src="views/assets/js/zabuto_calendar.js"></script>  
+    <script type="text/javascript" src="views/app/js/listacotizaciones.js"></script>
 	</body>
 </html>
