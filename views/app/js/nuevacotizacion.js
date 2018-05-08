@@ -52,8 +52,8 @@ var tab = $('#dataTables1').DataTable();
 							pTable.fnAddData([
 							data.datos[i].id,
 							'<label  name ="'+data.datos[i].id+'desc" id="desc_'+data.datos[i].id+'">'+data.datos[i].descripcion+'</label>',
-							'<input   name="'+data.datos[i].id+'precio" id="precio_'+data.datos[i].id+'" type="text" value='+data.datos[i].precio+'>',
-							'<input   name="'+data.datos[i].id+'cantidad" id="cantidad_'+data.datos[i].id+'" type="number" min="1" value="1">',
+							'<input class="form-control"  name="'+data.datos[i].id+'precio" id="precio_'+data.datos[i].id+'" type="text" value='+data.datos[i].precio+'>',
+							'<input class="form-control"  name="'+data.datos[i].id+'cantidad" id="cantidad_'+data.datos[i].id+'" type="number" min="1" value="1">',
 							'<button class="btn btn-link" onclick="addRows('+data.datos[i].id+","+subtotal+","+impuesto+","+total+')"><i class="fa fa-plus" aria-hidden="true"></i></button>'
 							]);										
 						}
@@ -188,7 +188,7 @@ var tab = $('#dataTables1').DataTable();
 			table.row.add([
 				cantidad,
 				descripcion,
-				precio*cantidad,
+				(precio*cantidad).toPrecision(3),
 				'<a id="delete" href="#" onclick="deleteRows()" ><i class="fa fa-times" aria-hidden="true"></i></a>'
 			]).draw(false);
 
@@ -231,7 +231,7 @@ var tab = $('#dataTables1').DataTable();
 
 			$('#txtsubtotal').val(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
 			$('#txtitbms').val(parseFloat(Math.round(impuesto * 100) / 100).toFixed(2));
-			$('#txttotal').val(parseFloat(Math.round(total * 100) / 100).toFixed(2));
+			$('#txttotal').val(parseFloat(subtotal)+impuesto);
 			//console.log(subtotal);
 		//return subtotal;
 		$('td').css("text-align","center");
