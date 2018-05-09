@@ -37,7 +37,7 @@
 																<fieldset>
 																	<div class="row">
 																		<div class="col-md-4 form-group">
-																			<label class="control-label" for="txtCliente">Cliente</label>
+																			<label class="control-label label-fontSize" for="txtCliente">Cliente</label>
 																			
 																			<div class="controls input-group">
 																			  <input class="form-control" name="txtCliente" id="txtCliente"  type="text" list="dlclient" required>
@@ -51,7 +51,7 @@
 																			<div id="resultadoBusqueda" style="border-style: ridge; display:none;"></div>
 																		</div>
 																	  	<div class="col-md-2 col-md-offset-6 form-group">
-																			<label class="control-label" for="txtNumcotiza"># Cotizacion </label>
+																			<label class="control-label label-fontSize" for="txtNumcotiza"># Cotizacion </label>
 																			
 																			<div class="controls">
 																			  <input class="form-control" name="txtNumcotiza" id="txtNumcotiza" type="text" readonly="true" required>									 
@@ -61,7 +61,7 @@
 
 																	<div class="row">
 										                              	<div class="col-md-4 form-group">
-										                                	<label class="control-label" for="txtEmpresa">Empresa </label>
+										                                	<label class="control-label label-fontSize" for="txtEmpresa">Empresa </label>
 										                                
 										                               		<div class="controls">
 										                                	<!-- <select class="form-control"  name="txtEmpresa" id="txtEmpresa" required>
@@ -71,7 +71,7 @@
 										                                	</div>
 									                              		</div>
 																		<div class="col-md-4 form-group">
-																			<label class="control-label" for="txtTelefono">Tel:</label>
+																			<label class="control-label label-fontSize" for="txtTelefono">Tel</label>
 																			
 																			<div class="controls input-group">
 																			  <input class="form-control" name="txtTelefono" id ="txtTelefono" type="tel" style="background-color : #FFFFFF; cursor: auto" placeholder="#telefono" data-toggle="popover" title="telefono no encontrado" data-content="Ir a la pestaña clientes y crear el cliente" data-placement="bottom"  required>
@@ -82,7 +82,7 @@
 																			</div>
 																		</div>
 																		<div class="col-md-4 form-group">
-																			<label class="control-label" for="txtCorreo">Correo</label>
+																			<label class="control-label label-fontSize" for="txtCorreo">Correo</label>
 																			
 																			<div class="controls input-group">
 																			  <input class="form-control" name="txtCorreo" id="txtCorreo" type="email"   placeholder="Email" required>
@@ -138,7 +138,7 @@
 												                         <!--<div class="col-md-4 form-group">-->
 												                              <label class="control-label col-sm-2 col-md-offset-3">SUBTOTAL</label>
 												                              <div class="col-sm-5 col-md-offset-1">
-												                                  <input type="text" class="form-control" name="txtsubtotal" id="txtsubtotal" type="text" readonly="true" value="">
+												                                  <label  class="form-control label-fontSize"  id="txtsubtotal"></label>
 												                              </div>
 												                          <!--</div>-->
 																	</div>
@@ -148,7 +148,7 @@
 																			<label class="control-label col-sm-2 col-md-offset-3">ITBMS</label>
 																			
 																			<div class="col-sm-5 col-md-offset-1">
-																			  <input class="form-control" name="txtitbms" id="txtitbms" type="text" readonly="true" required>									 
+																			  <label class="form-control label-fontSize" id="txtitbms"></label>									 
 																			</div>
 																	  	</div>
 																	</div>	
@@ -157,7 +157,7 @@
 																			<label class="control-label  col-sm-2 col-md-offset-3" for="txtNumcotiza">TOTAL </label>
 																			
 																			<div class="col-sm-5 col-md-offset-1">
-																			  <input class="form-control" name="txttotal" id="txttotal" type="text" readonly="true" required>									 
+																			  <label class="form-control label-fontSize" id="txttotal"></label>									 
 																			</div>
 																	  	</div>
 																	</div>

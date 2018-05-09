@@ -70,12 +70,12 @@ $(document).ready(function(){
 
 	$("#btnSearchClie").on('click',function(){
 if ($('#txtCliente').val().length <= 3){
-             	$("#msg").html('<div class="alert alert-info"><b>Verificar</b> No se encontraron registros con esa descripcion, favor escribir palabra completa para una busqueda mas eficiente.</div>');
+             	$("#msg").html('<div id="gritter-notice-wrapper"><div class="gritter-top"></div><div class="gritter-item"><div class="gritter-close" ></div><b>Verificar</b> No se encontraron registros con esa descripcion, favor escribir palabra completa para una busqueda mas eficiente.</div><div class="gritter-bottom"></div></div>');
 				$("#msg").removeAttr("style");
 							
 				setTimeout(function() {
 				$("#msg").fadeOut(1500);
-				},3000);
+				},4000);
 				
 
         }else{

@@ -229,9 +229,9 @@ var tab = $('#dataTables1').DataTable();
 			impuesto = (subtotal * 0.07);
 			total = (subtotal+impuesto);
 
-			$('#txtsubtotal').val(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
-			$('#txtitbms').val(parseFloat(Math.round(impuesto * 100) / 100).toFixed(2));
-			$('#txttotal').val(parseFloat(subtotal)+impuesto);
+			$('#txtsubtotal').text(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
+			$('#txtitbms').text(parseFloat(Math.round(impuesto * 100) / 100).toFixed(2));
+			$('#txttotal').text(parseFloat(subtotal)+impuesto);
 			//console.log(subtotal);
 		//return subtotal;
 		$('td').css("text-align","center");
@@ -285,15 +285,6 @@ function deleteRows(){
 				    .row(this)
 				    .data();
 				    
-//console.log(ressubtotal[2]);
-
-/* var column = tab.column( 2 );
- 
-				var tot =	$( column.footer() ).html(
-					    column.data().sum()
-
-					);*/
-	//console.log(tot);
 
 		var res = tab.row($(this).closest('tr'))
 							.remove()
@@ -325,9 +316,9 @@ function deleteRows(){
 			impuesto = (subtotal * 0.07);
 			total = (subtotal+impuesto);
 
-			$('#txtsubtotal').val(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
-			$('#txtitbms').val(parseFloat(Math.round(impuesto * 100) / 100).toFixed(2));
-			$('#txttotal').val(parseFloat(Math.round(total * 100) / 100).toFixed(2));
+			$('#txtsubtotal').text(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
+			$('#txtitbms').text(parseFloat(Math.round(impuesto * 100) / 100).toFixed(2));
+			$('#txttotal').text(parseFloat(Math.round(total * 100) / 100).toFixed(2));
 
 
 		/*$( tab.column().footer(1) ).html("Total: $" + parseFloat(Math.round(sum * 100) / 100).toFixed(2) );
