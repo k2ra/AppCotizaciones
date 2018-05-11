@@ -131,6 +131,7 @@
 
 												                </div>
 												                <!-- /.table-responsive -->
+												             
 												           		<div id="totales">
 												           			<div class="row">
 												           			<div class="col-md-offset-8 form-horizontal" >

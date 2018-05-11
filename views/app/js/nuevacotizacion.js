@@ -9,9 +9,9 @@ cotizacion();
 		var subtotal=0;
 		var impuesto=0;
 		var total=0;
-					$('#txtsubtotal').val("");
-					$('#txtitbms').val("");
-					$('#txttotal').val("");
+					$('#txtsubtotal').text("");
+					$('#txtitbms').text("");
+					$('#txttotal').text("");
 
 
 
@@ -188,7 +188,7 @@ var tab = $('#dataTables1').DataTable();
 			table.row.add([
 				cantidad,
 				descripcion,
-				(precio*cantidad).toPrecision(3),
+				(precio*cantidad).toFixed(2),
 				'<a id="delete" href="#" onclick="deleteRows()" ><i class="fa fa-times" aria-hidden="true"></i></a>'
 			]).draw(false);
 
@@ -305,9 +305,9 @@ function deleteRows(){
 		if(valempty === 0 ){
 			
 			$("tbody tr").remove();
-    		$('#txtsubtotal').val("");
-    		$('#txtitbms').val("");
-    		$('#txttotal').val("");
+    		$('#txtsubtotal').text("");
+    		$('#txtitbms').text("");
+    		$('#txttotal').text("");
 
 		}
 		else

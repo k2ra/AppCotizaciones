@@ -10,7 +10,7 @@
                   <li class="mt">
                       <a   href="?view=cotizacionAdd&mode=dashboard">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Inicio</span>
                       </a>
                   </li>
 				  
@@ -24,6 +24,12 @@
                           <li><a  href="?view=cotizacionAdd&mode=listcotizacion">Listado de Cotizaciones</a></li>
                       </ul>
                   </li>
+          <li class="sub-menu">
+              <a   href="?view=cotizacionAdd&mode=dashboard">
+                  <i class="fa fa-check"></i>
+                  <span>Facturacion</span>
+              </a>
+          </li>
 				  
 				  <li class="sub-menu">
                       <a  href="javascript:;">
