@@ -35,18 +35,18 @@
 	  	<div class="container">
 	  	
 		      <form class="form-login" method ="post" action="?view=login">
-		        <h2 class="form-login-heading">sign in now</h2>
+		        <h2 class="form-login-heading">Iniciar Sesion</h2>
 		        <div class="login-wrap">
 		            <input type="text" id="userId" name="userId" class="form-control" placeholder="User ID" autofocus>
 		            <br>
 		            <input type="password" id="pass" name="pass" class="form-control" placeholder="Password">
 		            <label class="checkbox">
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+		                    <a data-toggle="modal" href="login.html#myModal"> Olvido Su Contrasena?</a>
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> Ingresar</button>
 		            <hr>
 		            
 		           
