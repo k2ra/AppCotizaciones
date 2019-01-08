@@ -117,23 +117,19 @@ var tab = $('#dataTables1').DataTable();
 								},3000);
 				}	
 				else{
-				//console.log(form,table);
+				
 					console.log($('#cotiza_form').serialize() + "&table=" + table);
 					$.ajax({
 						url: "?view=cotizacionAdd&mode=nueva",
 						type: "POST",
-						data:  $('#cotiza_form').serialize() + "&table=" + table + "&val=insertaCot" ,
+						data:  $('#cotiza_form').serialize() + "&table=" + table + "&txtsubtotal="+$('#txtsubtotal').text()+"&txtitbms="+$('#txtitbms').text()+"&txttotal="+$('#txttotal').text()+"&val=insertaCot" ,
 						cache: false,
 						crossDomain: false,
 						//dataType:  	"json",
 						success: function(data) {
-						
-							console.log(data);
 								
 							$('#txtsubtotal').val("");
-							console.log("vamos bien");
-
-							console.log(numcotiza);	
+							
 							window.open("./core/bin/pdf_cotizacion.php?num="+numcotiza,"_blank","location=no, status=yes, top=10,left=20, width=800");
 									
 								

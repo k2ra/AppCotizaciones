@@ -139,7 +139,7 @@
 												                         <!--<div class="col-md-4 form-group">-->
 												                              <label class="control-label col-sm-2 col-md-offset-3">SUBTOTAL</label>
 												                              <div class="col-sm-5 col-md-offset-1">
-												                                  <label  class="form-control label-fontSize"  id="txtsubtotal"></label>
+												                                  <label  class="form-control label-fontSize" name="txtsubtotal" id="txtsubtotal"></label>
 												                              </div>
 												                          <!--</div>-->
 																	</div>
@@ -149,7 +149,7 @@
 																			<label class="control-label col-sm-2 col-md-offset-3">ITBMS</label>
 																			
 																			<div class="col-sm-5 col-md-offset-1">
-																			  <label class="form-control label-fontSize" id="txtitbms"></label>									 
+																			  <label class="form-control label-fontSize" name="txtitbms" id="txtitbms"></label>									 
 																			</div>
 																	  	</div>
 																	</div>	

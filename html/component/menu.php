@@ -14,22 +14,26 @@
                       </a>
                   </li>
 				  
-				  <li class="sub-menu">
-                      <a  href="javascript:;" >
-                          <i class="fa fa-file-text-o"></i>
-                          <span>Cotizacion</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a href="?view=cotizacionAdd&mode=nueva">Nueva Cotizacion</a></li>
-                          <li><a  href="?view=cotizacionAdd&mode=listcotizacion">Listado de Cotizaciones</a></li>
-                      </ul>
-                  </li>
-          <li class="sub-menu">
-              <a   href="?view=cotizacionAdd&mode=dashboard">
-                  <i class="fa fa-check"></i>
-                  <span>Facturacion</span>
-              </a>
-          </li>
+                    <li class="sub-menu">
+                        <a  href="javascript:;" >
+                            <i class="fa fa-file-text-o"></i>
+                            <span>Cotizacion</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="?view=cotizacionAdd&mode=nueva">Nueva Cotizacion</a></li>
+                            <li><a  href="?view=cotizacionAdd&mode=listcotizacion">Listado de Cotizaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a   href="javascript:;">
+                            <i class="fa fa-check"></i>
+                            <span>Facturacion</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="?view=facturacion&mode=nueva">Nueva Factura</a></li>
+                            <li><a  href="?view=facturacion&mode=lista">Listado de Facturas</a></li>
+                        </ul>
+                    </li>
 				  
 				  <li class="sub-menu">
                       <a  href="javascript:;">

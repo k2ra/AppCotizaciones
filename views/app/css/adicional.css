@@ -3,10 +3,23 @@ table {
 
 }
 
-.input-sm {
-	font-size: 1.4em;
-}
 
 .label-fontSize {
 	font-size: 1.4em;
+}
+.panel-head{
+	display: flex;
+	align-items: center;
+}
+.label-align-end{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 4%;
+}
+
+.control{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 1%;
+	margin-top: 1%;
 }
