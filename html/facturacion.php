@@ -63,10 +63,10 @@
                                                                                 <label class="control-label label-fontSize" for="txtNumcotiza"># Cotizacion</label>
                                                                                 
                                                                                 <div class="controls input-group">
-                                                                                <input class="form-control" name="txtCotizacion" id="txtCotizacion"  type="text">
+                                                                                <input class="form-control" name="txtCotizacion" id="txtCotizacion"  type="text" >
                                                                                     
                                                                                     <span class="input-group-btn">
-                                                                                        <a id="btnSearchClie"  class="btn btn-primary"><i class="fa fa-search"></i></a>
+                                                                                        <a href="javascript:buscarCotizacion();" id="btnSearchClie"  class="btn btn-primary"><i class="fa fa-search"></i></a>
                                                                                     </span>
                                                                                     
                                                                                 </div>
@@ -108,7 +108,7 @@
                                                                         </div>
                                                                         <div class="row  control">
                                                                                 <input class="btn btn-success btn-md " name="btnagregar" id="btnagregar" type="button" value=" + Agregar Producto"  />
-                                                                                <a class="btn btn-primary btn-md" name="btnenvio" id="btnenvio" > <i class="fa fa-print"></i> Imprimir</a> 
+                                                                                <a class="btn btn-primary btn-md" name="btnenvio" id="btnenvio" > <i class="fa fa-print"></i> Facturar</a> 
                                 
                                                                         </div>
 
@@ -122,7 +122,7 @@
                                                             <div class="panel panel-primary">
                                                                 <div class="nav nav-tabs panel-body">
                                                                     <div class="table-responsive">
-                                                                        <table class="table table-condensed table-hover dataTable no-footer" name="table1" id="dataTables1">
+                                                                        <table class="table table-condensed table-hover dataTable no-footer" name="table1" id="productosFac">
                                                                             <thead class="bg-gray">
                                                                                 <tr>
                                                                                     <th style="width:10%; text-align:center">Cantidad</th>
@@ -131,7 +131,7 @@
                                                                                     <th id ="iborrado" style="width:1%"></th>
                                                                                 </tr>
                                                                             </thead>
-                                                                            
+                                                                            <tbody id='cuerpo'></tbody>
                                                                         
                                                                         </table>
 
@@ -269,6 +269,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 	<script src="views/assets/js/common-scripts.js"></script>
     <script type="text/javascript" src="views/app/js/menu.js"></script>
+    <script type="text/javascript" src="views/app/js/facturacion.js"></script>
 
   </body>
 </html>

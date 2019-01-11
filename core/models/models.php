@@ -326,6 +326,22 @@ class cotizacion{
 
 				return $ans;
 		}
+
+		public function detalleCotizacion(){
+			$numcotiza = $_GET['data'];
+			$result = $this->db->query("SELECT *,DATE_FORMAT(cotiza.fecha_cotizacion, '%d/%m/%Y') as fecha	FROM detallecotizacion det, tbl_cotizaciones cotiza	WHERE det.cotizacion = cotiza.id_cotizacion and cotiza.id_cotizacion ='$numcotiza'");
+
+			if($this->db->rows($result) >0){
+				while($data = $this->db->recorrer($result)){
+					$resp[]=$data;
+				}
+
+			}else{
+				$resp =false;
+			}
+
+			return $resp;
+		}
 	
 }
 

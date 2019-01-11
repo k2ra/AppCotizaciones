@@ -9,6 +9,11 @@ $models = new cotizacion();
                 $json = array($models->cotizacionesxmes());
                 
                 echo  json_encode($json);
+            }else if(isset($_GET['data'])){
+                $resp =$models->detalleCotizacion();
+                header('Content-type: application/json');
+                echo json_encode($resp); 
+
             }else{
                     include('html/facturacion.php');
             }
