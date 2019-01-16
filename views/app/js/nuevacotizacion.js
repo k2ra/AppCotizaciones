@@ -17,76 +17,12 @@ cotizacion();
 
 
 
-var tab = $('#dataTables1').DataTable();
+var tab = $('#listaTotalProductos').DataTable();
 		tab.destroy();
 
-
-		$("#btnagregar").click(function(){
-			var valida="buscaproduct";
-               
-
-                $.ajax({
-					url: "?view=cotizacionAdd&mode=nueva",
-					type: "POST",
-					data:  "val="+ valida,
-					cache: false,
-					crossDomain: false,
-					success: function(data) {
-						
-						var pTable = $('#tblproductos').dataTable({
-								"bDestroy": true,
-								"bProcessing": true,
-								"bRetrieve": true,
-								"bServerSide": false,
-								//"bFilter": false,
-								"bLengthChange" : false,
-								"bSort": false,
-								"bAutoWidth": false,
-								"paging": true,
-								"dom": '<"top"f>rt<"bottom"p>'
-						});
-						pTable.fnClearTable();
-
-						for(var i = 0; i < data.datos.length; i++) {
-
-							pTable.fnAddData([
-							data.datos[i].id,
-							'<label  name ="'+data.datos[i].id+'desc" id="desc_'+data.datos[i].id+'">'+data.datos[i].descripcion+'</label>',
-							'<input class="form-control"  name="'+data.datos[i].id+'precio" id="precio_'+data.datos[i].id+'" type="text" value='+data.datos[i].precio+'>',
-							'<input class="form-control"  name="'+data.datos[i].id+'cantidad" id="cantidad_'+data.datos[i].id+'" type="number" min="1" value="1">',
-							'<button class="btn btn-link" onclick="addRows('+data.datos[i].id+","+subtotal+","+impuesto+","+total+')"><i class="fa fa-plus" aria-hidden="true"></i></button>'
-							]);										
-						}
-						
-							console.log(data);				
-					},
-					error: function() {
-						// Fail message
-					},
-				})
-
-
- 			$("#despliegaProducto").modal();
-
-  
-        });
-
-		
-
-
-		/*$("#cotiza_form").find("input,textarea,select").jqBootstrapValidation({
-			preventSubmit: true,
-			submitError: function($form, event, errors) {
-				// Here I do nothing, but you could do something like display 
-				// the error messages to the user, log, etc.
-			},
-			submitSuccess: function($form, event) {
-				event.preventDefault();
-				//addRows();
-				*/
 			$("#btnenvio").click(function(){
 				var numcotiza =$("#txtNumcotiza").val();
-				var table = $('#dataTables1 tr:has(td)').map(function(i, v) {
+				var table = $('#listaTotalProductos tr:has(td)').map(function(i, v) {
 					    								var $td =  $('td', this);
 													        return {
 													                 id: ++i,
@@ -97,7 +33,7 @@ var tab = $('#dataTables1').DataTable();
 														}).get();
 				table = JSON.stringify(table);
 
-				var tableval = $('#dataTables1').DataTable();
+				var tableval = $('#listaTotalProductos').DataTable();
 				tableval.destroy();
 				
 				if ( ! tableval.data().count() ) {
@@ -166,7 +102,7 @@ var tab = $('#dataTables1').DataTable();
 		var precio=document.getElementById('precio_'+id).value;
 		var sum=0;
 
-		var table = $('#dataTables1').DataTable({
+		var table = $('#listaTotalProductos').DataTable({
 			"paging" : false, 
 			"bLengthChange" : false, 
 			"bFilter": false,
@@ -208,7 +144,7 @@ var tab = $('#dataTables1').DataTable();
 				sum = totalprecio();
 
 				    if(table === 0 ){
-			//$('#dataTables1').DataTable();//.destroy();
+			//$('#listaTotalProductos').DataTable();//.destroy();
 
     					//$( table.column().footer() ).html("Total: $0.00");	
 
@@ -255,7 +191,7 @@ var tab = $('#dataTables1').DataTable();
 
 	
 function deleteRows(){
-	var tab = $('#dataTables1').DataTable();
+	var tab = $('#listaTotalProductos').DataTable();
 		tab.destroy();
 		
 	var sum=0;
@@ -271,7 +207,7 @@ function deleteRows(){
             };
 
 	console.log(this);
-	$("#dataTables1 tr").on('click', function(e){
+	$("#listaTotalProductos tr").on('click', function(e){
 		var ressubtotal;
 
 	e.stopPropagation();
@@ -294,7 +230,7 @@ function deleteRows(){
 		impuesto = (subtotal * 0.07);
 		total = (subtotal+impuesto);
 
-		console.log(sum+" 2do");
+		
 
 		var valempty =tab.page.info().recordsDisplay;
 
@@ -329,7 +265,7 @@ function deleteRows(){
 	function totalprecio(){
 		var sum=0;
 
-		$("#dataTables1 tbody tr").each(function (index) 
+		$("#listaTotalProductos tbody tr").each(function (index) 
         {
             var campo1;
             $(this).children("td").eq(2).each(function (index2) 

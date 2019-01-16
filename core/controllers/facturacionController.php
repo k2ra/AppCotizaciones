@@ -1,5 +1,6 @@
 <?php
 $models = new cotizacion();
+$factura = new NumFactura();
 
     switch (isset($_GET['mode'])? $_GET['mode'] : null) {
 
@@ -15,7 +16,8 @@ $models = new cotizacion();
                 echo json_encode($resp); 
 
             }else{
-                    include('html/facturacion.php');
+                $numFactura = $factura->nuevoNumeroFactura();
+                include('html/facturacion.php');
             }
     
         break; 
@@ -32,6 +34,7 @@ $models = new cotizacion();
         break; 
         
         default:
+            $numFactura = $factura->nuevoNumeroFactura();
             include('html/facturacion.php');
         break;
         
