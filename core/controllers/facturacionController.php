@@ -7,7 +7,8 @@ $factura = new NumFactura();
         case "nueva": 
             if($_POST){
                 header('Content-type: application/json');
-                $json = array($models->cotizacionesxmes());
+                $numFactura = $factura->nuevoNumeroFactura();
+                $json = array($models->insertaFactura($numFactura));
                 
                 echo  json_encode($json);
             }else if(isset($_GET['data'])){
@@ -28,6 +29,8 @@ $factura = new NumFactura();
                 
                 echo  json_encode($json);
             }else{
+                    $resp = $models->listaFactura();
+                    
                     include('html/listaFacturacion.php');
             }
 

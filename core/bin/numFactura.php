@@ -8,7 +8,7 @@ class NumFactura{
 
     public function nuevoNumeroFactura(){
         $stringFac="FAC_";
-        $result = $this->db->query('SELECT MAX(id_cotizacion) AS id FROM tbl_cotizaciones order by id_cotizacion desc');
+        $result = $this->db->query('SELECT MAX(id_factura) AS id FROM tbl_factura order by id_factura desc');
 
         if ($this->db->rows($result) > 0) {
             // output data of each row
@@ -18,7 +18,7 @@ class NumFactura{
                 //$stringcotiza=substr ($row["id"],0,6);
                 $stringFac .= $num;
                 if (!$stringFac){
-                    $stringFac="COT_";
+                    $stringFac="FAC_";
                 }
                 $resp = $stringFac;
             }

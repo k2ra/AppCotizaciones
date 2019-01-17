@@ -47,6 +47,17 @@
                                                         <!--<th>Acciones</th>-->
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <?php
+                                                    foreach ($resp as  $value) {
+                                                        echo'<tr><td>'.$value['factura'].'</td>';
+                                                        echo'<td>'.$value['cliente'].'</td>';
+                                                        echo'<td>'.$value['fecha'].'</td>';
+                                                        echo'<td>'.$value['monto'].'</td></tr>';
+                                                    }
+                                                    
+                                                    ?>
+                                                </tbody>
                                                 <tfoot></tfoot>
                                     </table>
                                         </div>

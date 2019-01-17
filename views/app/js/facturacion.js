@@ -90,28 +90,21 @@ function facturar(){
         }	
         else{
         
-            console.log($('#factura_form').serialize() + "&table=" + table);
-          /* $.ajax({
-                url: "?view=cotizacionAdd&mode=nueva",
-                type: "POST",
-                data:  $('#cotiza_form').serialize() + "&table=" + table + "&txtsubtotal="+$('#txtsubtotal').text()+"&txtitbms="+$('#txtitbms').text()+"&txttotal="+$('#txttotal').text()+"&val=insertaCot" ,
-                cache: false,
-                crossDomain: false,
-                //dataType:  	"json",
-                success: function(data) {
-                        
-                    $('#txtsubtotal').val("");
-                    
-                    window.open("./core/bin/pdf_cotizacion.php?num="+numcotiza,"_blank","location=no, status=yes, top=10,left=20, width=800");
-                            
-                        
-                },
-                error: function() {
-                    // Fail message
-                },
+            console.log($('#factura_form').serialize() + "&table=" + table + "&txtsubtotal="+element('txtsubtotal').textContent+"&txtitbms="+element('txtitbms').textContent+"&txttotal="+element('txttotal').textContent);
 
+            fetch('?view=facturacion&mode=nueva',{
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body:$('#factura_form').serialize() + "&table=" + table + "&txtsubtotal="+element('txtsubtotal').textContent+"&txtitbms="+element('txtitbms').textContent+"&txttotal="+element('txttotal').textContent
             })
-            
+            .then(function(response){
+                return response.text();
+            })
+            .then(function(texto){
+                console.log(texto);
+            })
             $('#txtsubtotal').val("");
             $('#txtitbms').val("");
             $('#txttotal').val("");
@@ -119,7 +112,8 @@ function facturar(){
             setTimeout(function() {
                         location.reload();
                         },2000);
-            */
+ 
+            
         }
         
     });

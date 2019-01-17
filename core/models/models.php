@@ -342,6 +342,47 @@ class cotizacion{
 
 			return $resp;
 		}
+
+		public function insertaFactura($numfactura){
+			$numcotiza = $_POST['txtCotizacion'];
+			$cliente = $_POST['txtCliente'];
+			$empresa = $_POST['txtEmpresa'];
+			$telefono = $_POST['txtTelefono'];
+			$correo = $_POST['txtCorreo'];
+			$subtotal = $_POST['txtsubtotal'];
+			$itbms = $_POST['txtitbms'];
+			$total = $_POST['txttotal'];
+
+			$result = $this->db->query("INSERT INTO TBL_FACTURA VALUES('$numfactura',now(),'$numcotiza','$cliente','$empresa','$telefono','$correo','$subtotal','$itbms',$total)");
+
+			if ($this->db->affected_rows>0) {
+    			$resp = "Nuevo Producto agregado correctamente";
+			} else {
+   				$resp =false;
+			}
+
+			
+			$this->db->close();
+
+			return $resp;
+		
+		}
+
+		public function listaFactura(){
+
+			$result = $this->db->query("SELECT id_factura as factura, fecha,cliente,monto FROM tbl_factura");
+
+			if($this->db->rows($result) >0){
+				while($data = $this->db->recorrer($result)){
+					$resp[]=$data;
+				}
+
+			}else{
+				$resp =false;
+			}
+
+			return $resp;
+		}
 	
 }
 
