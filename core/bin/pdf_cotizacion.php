@@ -9,7 +9,7 @@ $db = new Conexion();
 
 include_once('../../views/reports/class/tcpdf/tcpdf.php');
 include_once("../../views/reports/class/PHPJasperXML.inc.php");
-include_once ('../../views/reports/class/setting.php');
+include_once('../../views/reports/class/setting.php');
 //include 'models.php';
 //$connect = new cotizacion();
 

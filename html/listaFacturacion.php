@@ -44,19 +44,22 @@
                                                         <th>Cliente</th>
                                                         <th>Fecha de Facturacion</th>
                                                         <th>Monto</th>
-                                                        <!--<th>Acciones</th>-->
+                                                        <th>Acciones</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                    foreach ($resp as  $value) {
-                                                        echo'<tr><td>'.$value['factura'].'</td>';
-                                                        echo'<td>'.$value['cliente'].'</td>';
-                                                        echo'<td>'.$value['fecha'].'</td>';
-                                                        echo'<td>'.$value['monto'].'</td></tr>';
-                                                    }
+                                                        foreach ($resp as  $value) {
+                                                            $a = $value['factura'];
+                                                            echo'<tr><td>'.$value['factura'].'</td>';
+                                                            echo'<td>'.$value['cliente'].'</td>';
+                                                            echo'<td>'.$value['fecha'].'</td>';
+                                                            echo'<td>'.$value['monto'].'</td>';
+                                                            echo'<td><a class="btn btn-primary btn-md" onclick="muestraFactura(id)" id="'.$value['factura'].'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td></tr>';
+							                                //.' '.'<a  class="btn btn-danger btn-md" onclick="eliminaFactura(id)" id="'.$value['factura'].'"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td></tr>';
+                                                        }
                                                     
-                                                    ?>
+                                                    ?>   
                                                 </tbody>
                                                 <tfoot></tfoot>
                                     </table>
@@ -80,12 +83,14 @@
 <script class="include" type="text/javascript" src="views/assets/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="views/assets/js/jquery.scrollTo.min.js"></script>
 <script src="views/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
+<script src="views/assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.js"></script>
+<script src="views/assets/plugins/DataTables-1.10.12/media/js/sum().js"></script>
+<script src="views/assets/plugins/DataTables-1.10.12/media/js/dataTables.bootstrap.js"></script>
 
 <!--common script for all pages-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="views/assets/js/common-scripts.js"></script>
 <script type="text/javascript" src="views/app/js/menu.js"></script>
-
+<script type="text/javascript" src="views/app/js/listafacturacion.js"></script>
 </body>
 </html>

@@ -150,7 +150,7 @@ var tab = $('#listaTotalProductos').DataTable();
 
 					}
 					else{
-						console.log("addrow");
+						
 					/*$( table.column().footer() ).html("Total: $" + parseFloat(Math.round(sum * 100) / 100).toFixed(2) );
 					$( 'tr:eq(2)',table.column().footer() ).html("Total: $" + parseFloat(Math.round(sum * 100) / 100).toFixed(2) );*/
 
@@ -181,7 +181,7 @@ var tab = $('#listaTotalProductos').DataTable();
 				//window.location.href = data.info;
 					//clear all fields
 				$('#txtNumcotiza').val(data);	
-					console.log(data);				
+								
 			},
 			error: function() {
 				// Fail message

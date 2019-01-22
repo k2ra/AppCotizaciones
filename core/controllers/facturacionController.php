@@ -24,14 +24,12 @@ $factura = new NumFactura();
         break; 
         case "lista": 
             if($_POST){
-                header('Content-type: application/json');
-                $json = array($models->cotizacionesxmes());
-                
-                echo  json_encode($json);
-            }else{
-                    $resp = $models->listaFactura();
-                    
-                    include('html/listaFacturacion.php');
+               include('core/bin/pdf_cotizacion.php');
+            }
+            else{
+                $resp = $models->listaFactura();
+                include('html/listaFacturacion.php');
+               
             }
 
         break; 

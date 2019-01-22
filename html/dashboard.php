@@ -32,7 +32,9 @@
                           <div class="content-panel">
                               <h4><i class="fa fa-angle-right"></i> Cotizaciones por Mes</h4>
                               <div class="panel-body">
-                                  <div id="hero-bar" class="graph"></div>
+                                  <div id="hero-bar" class="graph">
+                                      <canvas id ="cotmes"></canvas>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -78,17 +80,10 @@
     <script src="views/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script type="text/javascript" src="views/assets/js/chart-master/Chart.js"></script>
-    <script src="views/assets/js/chartjs-conf.js"></script>
-    
-  <script>
-      //custom select box
-
-      $(function(){
-         // $('select.styled').customSelect();
-      });
-
-  </script>
+ 
+    <script src="views/assets/plugins/node_modules/chart.js"></script>
+  
+        <script src="views/app/js/dashboard.js"></script>
 
   </body>
 </html>
