@@ -15,7 +15,7 @@ class cotizacion{
 			$detallecot=array();
 			$fecha_actual = date("y-m-d");
 
-			$query = "INSERT INTO tbl_cotizaciones VALUES ('$numcotiza', '$cliente','$fecha_actual','$total')";
+			$query = "INSERT INTO tbl_cotizaciones VALUES ('$numcotiza', '$cliente','$empresa','$telefono','$correo',now(),'$subtotal','$impuesto',$total)";
 
 
 			if ($this->db->query($query)) {
@@ -30,12 +30,12 @@ class cotizacion{
 			
 				foreach($detallecot as $obj => $value){
 					
-					echo $value['descripcion'];
+					
 					$cantidad=$value['cantidad'];
 					$descripcion=$value['descripcion'];
 					$precio = $value['precio'];
 
-					$querydet = "INSERT INTO detallecotizacion VALUES ('$numcotiza', '$cliente', '$empresa','$telefono','$correo','$impuesto','$total','$cantidad' ,'$descripcion' , '$precio')";
+					$querydet = "INSERT INTO detallecotizacion VALUES ('$numcotiza','$cantidad' ,'$descripcion' , '$precio')";
 					//echo $obj[0];
 				      // $id =$det[$obj]{'descripcion'};
 				       // $descripcion = $obj{'descripcion'};
@@ -352,15 +352,30 @@ class cotizacion{
 			$subtotal = $_POST['txtsubtotal'];
 			$itbms = $_POST['txtitbms'];
 			$total = $_POST['txttotal'];
+			$detalleFact = $_POST['table'];
 
 			$result = $this->db->query("INSERT INTO TBL_FACTURA VALUES('$numfactura',now(),'$numcotiza','$cliente','$empresa','$telefono','$correo','$subtotal','$itbms',$total)");
 
 			if ($this->db->affected_rows>0) {
-    			$resp = "Nuevo Producto agregado correctamente";
+				$detalleFact = json_decode($detalleFact,true);
+				
+				foreach($detalleFact as $obj => $value){
+					$productoId = $value['id'];
+					$cantidad=$value['cantidad'];
+					$descripcion=$value['descripcion'];
+					$precio = $value['precio'];
+
+					$querydet = $this->db->query("INSERT INTO detallefactura VALUES ('$numfactura', $productoId, '$descripcion',$cantidad,'$precio')");
+					
+					if ($this->db->affected_rows>0) {
+						$resp = $numfactura;
+					} else {
+						$resp = false;
+					}
+				}
 			} else {
    				$resp =false;
 			}
-
 			
 			$this->db->close();
 

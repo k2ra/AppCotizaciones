@@ -1,6 +1,7 @@
 <?php
-$models = new cotizacion();
-$factura = new NumFactura();
+$models     = new cotizacion();
+$factura    = new NumFactura();
+//$reporte     = new Reporte();
 
     switch (isset($_GET['mode'])? $_GET['mode'] : null) {
 
@@ -23,16 +24,16 @@ $factura = new NumFactura();
     
         break; 
         case "lista": 
-            if($_POST){
-               include('core/bin/pdf_cotizacion.php');
-            }
-            else{
                 $resp = $models->listaFactura();
                 include('html/listaFacturacion.php');
-               
-            }
 
-        break; 
+        break;
+
+        case "reporte":
+        
+           include('core/bin/pdf_facturacion.php');
+        
+        break;
         
         default:
             $numFactura = $factura->nuevoNumeroFactura();

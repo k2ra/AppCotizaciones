@@ -28,8 +28,11 @@ function muestraFactura(factura){
         })
         .then(function(texto){
             console.log(texto);
+            //window.open(texto,"_blank","location=no, status=yes, top=10,left=20, width=800");
            
-        })
+        }) 
+       // window.open('?view=facturacion&mode=lista?num=COT_0010',"_blank","location=no, status=yes, top=10,left=20, width=800");
+
 }
 
 function eliminaFactura(factura){

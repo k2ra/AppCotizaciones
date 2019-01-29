@@ -49,14 +49,17 @@
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                        foreach ($resp as  $value) {
-                                                            $a = $value['factura'];
-                                                            echo'<tr><td>'.$value['factura'].'</td>';
-                                                            echo'<td>'.$value['cliente'].'</td>';
-                                                            echo'<td>'.$value['fecha'].'</td>';
-                                                            echo'<td>'.$value['monto'].'</td>';
-                                                            echo'<td><a class="btn btn-primary btn-md" onclick="muestraFactura(id)" id="'.$value['factura'].'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td></tr>';
-							                                //.' '.'<a  class="btn btn-danger btn-md" onclick="eliminaFactura(id)" id="'.$value['factura'].'"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td></tr>';
+                                                        if($resp!=false){
+                                                            foreach ($resp as  $value) {
+                                                                $a = $value['factura'];
+                                                                echo'<tr><td>'.$value['factura'].'</td>';
+                                                                echo'<td>'.$value['cliente'].'</td>';
+                                                                echo'<td>'.$value['fecha'].'</td>';
+                                                                echo'<td>'.$value['monto'].'</td>';
+                                                                echo'<td><a class="btn btn-primary btn-md" href="?view=facturacion&mode=reporte&factura='.$value['factura'].'" id="'.$value['factura'].'"  target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td></tr>';
+                                                                //.' '.'<a  class="btn btn-danger btn-md" onclick="eliminaFactura(id)" id="'.$value['factura'].'"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td></tr>';
+                                                            }
+
                                                         }
                                                     
                                                     ?>   

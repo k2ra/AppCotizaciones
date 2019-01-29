@@ -34,7 +34,7 @@ $(document).ready(function (){
 							data.datos[i].cliente,
 							data.datos[i].fecha,
 							data.datos[i].monto,
-							'<a class="btn btn-primary btn-md" href="./core/bin/pdf_cotizacion.php?num='+data.datos[i].id+'" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>'
+							'<a class="btn btn-primary btn-md" href="?view=cotizacionAdd&mode=reporte&num='+data.datos[i].id+'" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>'
 							+' '+'<a class="btn btn-danger btn-md" onclick="eliminarCotizacion('+"'"+data.datos[i].id+"'"+')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>'
 							
 							

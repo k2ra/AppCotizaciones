@@ -25,16 +25,16 @@ function buscarCotizacion(){
             limpiaTabla.removeChild(limpiaTabla.firstChild);
         }
         var data = JSON.parse(texto);
-        //console.log(data)
+        console.log(data)
         if(data){
 
-            document.getElementById('txtCliente').value=data[0][1];
-            document.getElementById('txtEmpresa').value=data[0][2];
-            document.getElementById('txtTelefono').value=data[0][3];
-            document.getElementById('txtCorreo').value=data[0][4];
-            document.getElementById('txtsubtotal').innerHTML =data[0][6];
-            document.getElementById('txtitbms').innerHTML =data[0][5];
-            document.getElementById('txttotal').innerHTML =data[0][6];
+            document.getElementById('txtCliente').value=data[0]['cliente'];
+            document.getElementById('txtEmpresa').value=data[0]['empresa'];
+            document.getElementById('txtTelefono').value=data[0]['telefono'];
+            document.getElementById('txtCorreo').value=data[0]['correo'];
+            document.getElementById('txtsubtotal').innerHTML =data[0]['subtotal'];
+            document.getElementById('txtitbms').innerHTML =data[0]['impuesto'];
+            document.getElementById('txttotal').innerHTML =data[0]['monto'];
     
             data.forEach(element => {
                 
@@ -90,7 +90,7 @@ function facturar(){
         }	
         else{
         
-            console.log($('#factura_form').serialize() + "&table=" + table + "&txtsubtotal="+element('txtsubtotal').textContent+"&txtitbms="+element('txtitbms').textContent+"&txttotal="+element('txttotal').textContent);
+           // console.log($('#factura_form').serialize() + "&table=" + table + "&txtsubtotal="+element('txtsubtotal').textContent+"&txtitbms="+element('txtitbms').textContent+"&txttotal="+element('txttotal').textContent);
 
             fetch('?view=facturacion&mode=nueva',{
                 method: "POST",
@@ -103,7 +103,9 @@ function facturar(){
                 return response.text();
             })
             .then(function(texto){
-                console.log(texto);
+                console.log(JSON.parse(texto));
+                const numfactura = JSON.parse(texto);
+                window.open("?view=facturacion&mode=reporte&factura="+numfactura,"_blank","location=no, status=yes, top=10,left=20, width=800");
             })
             $('#txtsubtotal').val("");
             $('#txtitbms').val("");

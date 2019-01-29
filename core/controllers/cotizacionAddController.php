@@ -42,66 +42,70 @@ if(isset($_SESSION['user'])) {
 		//if ($_POST){
 			switch ($valida) {
 
-						        case "dashboard": {
-                        if($_POST){
-                            header('Content-type: application/json');
-                            $json = array($models->cotizacionesxmes());
-                           
-                            echo  json_encode($json);
-                        }else{
-                   				include('html/dashboard.php');
-                        }
-                   	
-                		}break;
-                		case "nueva": {
+				case "dashboard": {
+				if($_POST){
+					header('Content-type: application/json');
+					$json = array($models->cotizacionesxmes());
+					
+					echo  json_encode($json);
+				}else{
+						include('html/dashboard.php');
+				}
+			
+				}break;
+				case "nueva": {
 
-                   				include('html/cotizacion.php');
+						include('html/cotizacion.php');
 
-                   	
-                		}break;
-                        case "buscaproduct": {
-                        	header('Content-type: application/json');
-                        	$json = array('datos' => $models->buscaProductos());
-                          echo  json_encode($json);
-                        }break;
-                        case "insertaCot": {
-                            echo $models->insertaCotizacion($numcotiza, $cliente, $empresa,$telefono,$correo, $subtotal, $impuesto, $total,$detalle);
-							           //echo $reportcotizacion->reporte_cotizacion($numcotiza);
-							           echo "Success";
-                        }break;
-                        case "search": {
-                            $resp = $models->buscaDatosClie($buscaCliente);
-                  
-                            if( count($resp) ==""){
-                              echo "0";
-                            }else{
+			
+				}break;
+				case "buscaproduct": {
+					header('Content-type: application/json');
+					$json = array('datos' => $models->buscaProductos());
+					echo  json_encode($json);
+				}break;
+				case "insertaCot": {
+					echo $models->insertaCotizacion($numcotiza, $cliente, $empresa,$telefono,$correo, $subtotal, $impuesto, $total,$detalle);
+								//echo $reportcotizacion->reporte_cotizacion($numcotiza);
+								echo "Success";
+				}break;
+				case "search": {
+					$resp = $models->buscaDatosClie($buscaCliente);
+			
+					if( count($resp) ==""){
+						echo "0";
+					}else{
 
-                              header('Content-type: application/json');
-                              $json = array('datos' => $resp);
-                                echo  json_encode($json);
-                                
-                            }
-          
-                        }break;
-                        //case 'listacotizacion': listcotizacion
-                         case 'listcotizacion': 
-                        	
-                        	
-                          if($_POST) {
-                          header('Content-type: application/json');
-                        	$json = array('datos' => $models->muestradetcotizacion());
-                         
-                          echo  json_encode($json);
-                      		}else{
-                      				include('html/listacotizacion.php');
-                      		}
-                        break;
+						header('Content-type: application/json');
+						$json = array('datos' => $resp);
+						echo  json_encode($json);
+						
+					}
+	
+				}break;
+				//case 'listacotizacion': listcotizacion
+					case 'listcotizacion': 
+					
+					
+					if($_POST) {
+					header('Content-type: application/json');
+					$json = array('datos' => $models->muestradetcotizacion());
+					
+					echo  json_encode($json);
+					}else{
+							include('html/listacotizacion.php');
+					}
+				break;
 
-                        case "eliminarCotizacion": {
+				case "eliminarCotizacion": {
 
-                        echo $models->eliminarCotizacion($id);
-                    
-                        }break;
+				echo $models->eliminarCotizacion($id);
+			
+				}break;
+				
+				case "reporte":
+					include('core/bin/pdf_cotizacion.php');
+				break;
                         
                         
             }

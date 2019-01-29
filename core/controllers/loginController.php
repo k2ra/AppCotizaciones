@@ -12,7 +12,7 @@
         		$password = isset($_POST['pass']) ? mysqli_real_escape_string(new Conexion(), $_POST['pass']) :  "";
         		
         	}
-
+			
 
         if($_POST){
         	$resp = $models->validaCredenciales($usr, $password);

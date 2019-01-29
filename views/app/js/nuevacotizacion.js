@@ -66,7 +66,7 @@ var tab = $('#listaTotalProductos').DataTable();
 								
 							$('#txtsubtotal').val("");
 							
-							window.open("./core/bin/pdf_cotizacion.php?num="+numcotiza,"_blank","location=no, status=yes, top=10,left=20, width=800");
+							window.open("?view=cotizacionAdd&mode=reporte&num="+numcotiza,"_blank","location=no, status=yes, top=10,left=20, width=800");
 									
 								
 						},

@@ -1,8 +1,8 @@
 <?php
 $server="localhost";
 $db="cotizaciones";
-$user="administrador";
-$pass="ejaxfcm3m6pHr9FY";
+$user="UserCotiza";
+$pass="UserCotiza";
 $version="0.9b";
 $pgport=5432;
 $pchartfolder="./pchart2";

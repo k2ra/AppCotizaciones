@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="900578bd-41f6-46ab-8813-8dbc3f2b71f7">
 	<property name="ireport.zoom" value="1.1"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="4"/>
+	<property name="ireport.y" value="0"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -331,48 +331,48 @@ cotizacion =$P{numcotiza}]]>
 		<band height="89" splitType="Stretch">
 			<textField pattern="###0.00">
 				<reportElement x="452" y="37" width="100" height="20" uuid="cff18bf3-7fa3-4d35-8e48-6726ba3e795a"/>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{impuesto}]]></textFieldExpression>
-			</textField>
-			<textField pattern="###0.00">
-				<reportElement x="452" y="67" width="100" height="20" uuid="5af54c4d-9c5b-464c-af9d-08f0d32444a9"/>
-				<textElement textAlignment="Right">
-					<font fontName="Lucida Sans" size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="0" y="1" width="555" height="1" uuid="902b3c4a-77bc-4ff0-95f2-2efbd91bc047"/>
 			</line>
 			<staticText>
 				<reportElement x="371" y="37" width="75" height="20" uuid="45c0964a-b71f-47cd-b838-37dd999f9c13"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
 				<text><![CDATA[ITBMS :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="371" y="67" width="75" height="20" uuid="9f33bf08-6742-4800-8e47-a6cf542d69be"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
 				<text><![CDATA[Total :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="371" y="7" width="75" height="20" uuid="e47b2bdc-ca61-4c61-ab6f-8ac5103e0df7"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
 				<text><![CDATA[Subtotal :]]></text>
 			</staticText>
 			<textField pattern="###0.00">
 				<reportElement x="452" y="7" width="100" height="20" uuid="f676a00c-e66d-4dbb-a319-1a6ad6b8a492"/>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{precio_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="67" width="100" height="20" uuid="6aab5527-a754-4404-ab5c-60fceaea0cb7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnFooter>
