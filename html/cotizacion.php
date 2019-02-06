@@ -20,27 +20,30 @@
       <section id="main-content">
           <section class="wrapper">
 
-				<div class="row">
-				<div class="col-lg-12">
-                     <h3 class="page-header">Nueva Cotizacion</h3>
-                </div>
+				<div class="row separacionPanel" >
                   	<div class="col-lg-12">
                   		<div id ="msg"></div>
                   		
 							<div class="tab-content">
                         		<div class="tab-pane fade in active " id="fcotizacion">
 			                      	<form id="cotiza_form">
-													<div class="panel panel-primary">
+													<div class="panel panel-info">
+														<div class="panel-heading ">
+															<div class="row panel-head" >
+																<h3 class='col-md-6'>Nueva Cotizacion</h3>
+																<label class="control-label label-fontSize col-md-6 label-align-end" for="txtCliente" ><b><?php  echo $numeroCotizacion ?></b></label></span>
+															</div> 
+														</div>
 														<div class="panel-body">
 
 
 																<fieldset>
 																	<div class="row">
 																		<div class="col-md-4 form-group">
-																			<label class="control-label label-fontSize" for="txtCliente">Cliente</label>
+																			<label class="control-label label-fontSize" for="txtCliente">Cliente*</label>
 																			
 																			<div class="controls input-group">
-																			  <input class="form-control" name="txtCliente" id="txtCliente"  type="text" list="dlclient" required>
+																			  <input class="form-control ingresoDato" name="txtCliente" id="txtCliente"  type="text" list="dlclient" required>
 																				
 																				<span class="input-group-btn">
         																			<a id="btnSearchClie"  class="btn btn-primary"><i class="fa fa-search"></i></a>
@@ -50,13 +53,18 @@
 																			
 																			<div id="resultadoBusqueda" style="border-style: ridge; display:none;"></div>
 																		</div>
-																	  	<div class="col-md-2 col-md-offset-6 form-group">
-																			<label class="control-label label-fontSize" for="txtNumcotiza"># Cotizacion </label>
+																		<div class="col-md-4 form-group">
+																			<label class="control-label label-fontSize" for="txtTelefono">Telefono*</label>
 																			
-																			<div class="controls">
-																			  <input class="form-control" name="txtNumcotiza" id="txtNumcotiza" type="text" readonly="true" required>									 
+																			<div class="controls input-group">
+																			  <input class="form-control ingresoDato" name="txtTelefono" id ="txtTelefono" type="tel" style="background-color : #FFFFFF; cursor: auto" placeholder="#telefono" data-toggle="popover" title="telefono no encontrado" data-content="Ir a la pestaña clientes y crear el cliente" data-placement="bottom"  required>
+																				  <div class="input-group-addon">
+																					<i class="fa fa-phone"></i>
+																				</div>	
+	
 																			</div>
-																	  	</div>
+																		</div>
+																	  	
 																	</div>
 
 																	<div class="row">
@@ -66,43 +74,32 @@
 										                               		<div class="controls">
 										                                	<!-- <select class="form-control"  name="txtEmpresa" id="txtEmpresa" required>
 										                                 	</select>-->
-										                                  	<input class="form-control" name="txtEmpresa" id="txtEmpresa" type="text" required>
+										                                  	<input class="form-control ingresoDato" name="txtEmpresa" id="txtEmpresa" type="text" required>
 										                                                     
 										                                	</div>
 									                              		</div>
 																		<div class="col-md-4 form-group">
-																			<label class="control-label label-fontSize" for="txtTelefono">Tel</label>
-																			
-																			<div class="controls input-group">
-																			  <input class="form-control" name="txtTelefono" id ="txtTelefono" type="tel" style="background-color : #FFFFFF; cursor: auto" placeholder="#telefono" data-toggle="popover" title="telefono no encontrado" data-content="Ir a la pestaña clientes y crear el cliente" data-placement="bottom"  required>
-																			  	<div class="input-group-addon">
-																					<i class="fa fa-phone"></i>
-																				</div>	
-
-																			</div>
-																		</div>
-																		<div class="col-md-4 form-group">
 																			<label class="control-label label-fontSize" for="txtCorreo">Correo</label>
 																			
 																			<div class="controls input-group">
-																			  <input class="form-control" name="txtCorreo" id="txtCorreo" type="email"   placeholder="Email" required>
+																			  <input class="form-control ingresoDato" name="txtCorreo" id="txtCorreo" type="email"   placeholder="Email" required>
 																			  <div class="input-group-addon">
 																					<i class="fa fa-envelope"></i>
 																				</div>
 																			</div>
 																		</div>
 			                           	 							</div>
-			                            							<div class="row">
-																		<div class="col-md-4  form-group">	
-																			<div class="controls">
-																			  <input class="btn btn-success btn-md" name="btnagregar" id="btnagregar" type="button" value=" + Agregar Producto"  />
-																			</div>
-																		</div>
-																		<div class="col-md-4  form-group">	
-																			<div class="controls">
-																			  <a class="btn btn-primary btn-md" name="btnenvio" id="btnenvio" > <i class="fa fa-print"></i> Imprimir</a> 
-																			</div>
-																		</div>  
+			                            							<div class="row control">
+																		
+																			
+																			  <input class="btn btn-success btn-md label-fontSize margenderecho" name="btnagregar" id="btnagregar" type="button" value=" + Agregar Producto"  />
+																			
+																		
+																		<!-- <div class="col-md-4  form-group"> -->	
+																			<!-- <div class="controls"> -->
+																			  <a class="btn btn-primary btn-md label-fontSize" name="btnenvio" id="btnenvio" > <i class="fa fa-print"></i> Imprimir</a> 
+																			<!-- </div> -->
+																		<!-- </div>  --> 
 							
 																	</div>
 

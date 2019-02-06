@@ -23,13 +23,16 @@
       <!--main content start-->
       <section id="main-content">
         <section class="wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-                 <h3 class="page-header">Nuevo Cliente</h3>
-            </div>
+          <div class="row separacionPanel">
             <div class="col-lg-12">
               <div id ="msgNewClie"></div>
-                <div class="panel panel-primary">
+                <div class="panel panel-info">
+                      <div class="panel-heading ">
+                          <div class="row panel-head" >
+                              <h3 class='col-md-6'>Nuevo Cliente</h3>
+                              
+                          </div> 
+                      </div>       
                       <div class="panel-body">
                       <h3 class="page-header"><small>Nuevo Cliente</small></h3>
                         <div class="col-md-9 col-xs-offset-3 centered">
@@ -37,7 +40,7 @@
                             <div class="row">
                               
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtNombre">Nombre *</label>
+                                <label class="control-label label-fontSize" for="txtNombre">Nombre *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -51,7 +54,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtEmpresa">Nombre Comercial *</label>
+                                <label class="control-label label-fontSize" for="txtEmpresa">Nombre Comercial *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -65,7 +68,7 @@
 
                                         <div class="row">
                                           <div class="col-md-2 form-group">
-                                            <label class="control-label" for="txtCedula">RUC o Cedula *</label>
+                                            <label class="control-label label-fontSize" for="txtCedula">RUC o Cedula *</label>
                                           </div>  
                                           <div class="col-md-4 form-group">
                                             <div class="controls input-group">
@@ -79,7 +82,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtCorreoClie">Correo *</label>
+                                <label class="control-label label-fontSize" for="txtCorreoClie">Correo *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -93,7 +96,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtDireccion">Dirección</label>
+                                <label class="control-label label-fontSize" for="txtDireccion">Dirección</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -107,7 +110,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtTelefonoClie">Telefono *</label>
+                                <label class="control-label label-fontSize" for="txtTelefonoClie">Telefono *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">

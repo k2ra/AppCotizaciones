@@ -4,11 +4,11 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="?view=cotizacionAdd&mode=dashboard"><img src="views/app/img/Icon-user.png" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="?view=dashboard"><img src="views/app/img/Icon-user.png" class="img-circle" width="60"></a></p>
               	  <h5 class="centered"><?php echo $_SESSION['user'];?></h5>
               	  	
                   <li class="mt">
-                      <a   href="?view=cotizacionAdd&mode=dashboard">
+                      <a   href="?view=dashboard">
                           <i class="fa fa-dashboard"></i>
                           <span>Inicio</span>
                       </a>

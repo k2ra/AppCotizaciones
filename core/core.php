@@ -19,6 +19,7 @@ define('REPORTE_BANNER_FACTURA','C:\\wamp3\\www\\demos\\AppCotizaciones\\views\\
 require('core/models/class.Conexion.php');
 require('core/models/models.php');
 require('core/bin/numFactura.php');
+require('core/bin/numCotiza.php');
 require('views/reports/class/tcpdf/tcpdf.php');
 require("views/reports/class/PHPJasperXML.inc.php");
 require('views/reports/class/setting.php');

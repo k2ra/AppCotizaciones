@@ -20,14 +20,16 @@
       <section id="main-content">
           <section class="wrapper">
 
-				<div class="row">
-         <div class="col-lg-12">
-
-           <h3 class="page-header"> Lista Cotización</h3>
-          </div>
+		<div class="row separacionPanel">
+         
           <div class="col-lg-12">
           <div id ="msglistcot"></div>
-          <div class="panel panel-primary">        
+          <div class="panel panel-info"> 
+            <div class="panel-heading ">
+                <div class="row panel-head" >
+                    <h3 class='col-md-6'>Lista Cotización</h3>
+                </div> 
+            </div>       
             <div class="panel-body">
                         
               <div class="table-responsive">

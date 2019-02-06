@@ -1,5 +1,8 @@
 <?php include(HTML_DIR . 'component/header.php'); ?>
-
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
   <body>
 
   <section id="container" >
@@ -32,9 +35,8 @@
                           <div class="content-panel">
                               <h4><i class="fa fa-angle-right"></i> Cotizaciones por Mes</h4>
                               <div class="panel-body">
-                                  <div id="hero-bar" class="graph">
-                                      <canvas id ="cotmes"></canvas>
-                                  </div>
+                                    
+                                    <div id="bar-chart" style="height: 300px;"></div>
                               </div>
                           </div>
                       </div>
@@ -42,7 +44,7 @@
                           <div class="content-panel">
                               <h4><i class="fa fa-angle-right"></i> Facturas por Mes</h4>
                               <div class="panel-body">
-                                  <div id="hero-graph" class="graph"></div>
+                                  <div id="facturas_bar" style="height: 300px;"></div>
                               </div>
                           </div>
                       </div>
@@ -75,13 +77,13 @@
 
 
     <!--common script for all pages-->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	
 	
     <script src="views/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
  
-    <script src="views/assets/plugins/node_modules/chart.js"></script>
+    
   
         <script src="views/app/js/dashboard.js"></script>
 

@@ -23,14 +23,17 @@
       <!--main content start-->
       <section id="main-content">
         <section class="wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-                 <h3 class="page-header">Nuevo Producto</h3>
-            </div>
+          <div class="row separacionPanel">
+           
             <div class="col-lg-12">
               <div id ="msgBuscaProduct"></div>
                 
-                   <div class="panel panel-primary">
+                   <div class="panel panel-info">
+                    <div class="panel-heading ">
+                      <div class="row panel-head" >
+                          <h3 class='col-md-6'>Buscar Producto</h3>
+                      </div> 
+                    </div>
                     <h3 class="page-header "><small><i class="fa fa-search"></i> Buscar Producto</small></h3>
                       <div class="panel-body">
                         
@@ -38,7 +41,7 @@
                           <form class="form-horizontal" id="productos_form">
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtBuscaProd">Nombre de Producto :</label>
+                                <label class="control-label label-fontSize" for="txtBuscaProd">Nombre de Producto :</label>
                               </div>  
                               <div class="col-md-6 form-group">
                                 <div class="controls input-group">

@@ -23,3 +23,32 @@ table {
 	margin-right: 1%;
 	margin-top: 1%;
 }
+.lblFooter{
+	display: flex;
+	justify-content: flex-end;
+}
+#cuerpo td:nth-child(3) {
+	text-align: right;
+}
+#cuerpo td {
+	text-align: center;
+}
+/* #txtTelefono, #txtCliente,#txtEmpresa, #txtCorreo,#txtCotizacion{
+	height: 3.5em;
+	size: 2em;
+} */
+#btnSearchClie{
+	display: flex;
+	height: 3.5em;
+	align-items: center;
+}
+.ingresoDato{
+	height: 3.5em;
+	size: 2em;
+}
+.separacionPanel{
+	margin-top: 3%;
+}
+.margenderecho{
+	margin-right: 1%;
+}

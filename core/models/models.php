@@ -19,13 +19,6 @@ class cotizacion{
 
 
 			if ($this->db->query($query)) {
-    			echo "New record created successfully";
-			} else {
-   				echo "Error: " . $query . "<br>" . $this->db->error();
-			}
-
-			//mysqli_close($this->connect);
-
 				$detallecot = json_decode($detalle,true);
 			
 				foreach($detallecot as $obj => $value){
@@ -34,19 +27,22 @@ class cotizacion{
 					$cantidad=$value['cantidad'];
 					$descripcion=$value['descripcion'];
 					$precio = $value['precio'];
-
+	
 					$querydet = "INSERT INTO detallecotizacion VALUES ('$numcotiza','$cantidad' ,'$descripcion' , '$precio')";
-					//echo $obj[0];
-				      // $id =$det[$obj]{'descripcion'};
-				       // $descripcion = $obj{'descripcion'};
-				        //$cantidad = $obj->cantidad;
+			
 					if ($this->db->query($querydet)) {
-	    				echo "New record created in detalle cotizacion successfully";
+						$resp =$numcotiza ;
 					} else {
-		   				echo "Error: " . $query . "<br>" . $this->db->error();
+						$resp = false;
 					}
 				}
+    			
+			} 
+			else {
+				$resp = false;	
+			}
 				$this->db->close();
+				return $resp;
 			
 
 		}
@@ -151,7 +147,7 @@ class cotizacion{
 		public function cotizacionesxmes(){
 			
 			$resp =array();
-			$query = "SELECT DATE_FORMAT(fecha_cotizacion,'%Y') as ano, DATE_FORMAT(fecha_cotizacion,'%M') as mes, count(*) as cantidad FROM tbl_cotizaciones group by DATE_FORMAT(fecha_cotizacion,'%Y-%M') order by id_cotizacion desc";
+			$query = "SELECT DATE_FORMAT(fecha_cotizacion,'%Y') as ano, DATE_FORMAT(fecha_cotizacion,'%M') as mes, count(*) as cantidad FROM tbl_cotizaciones group by DATE_FORMAT(fecha_cotizacion,'%Y-%M') order by id_cotizacion asc";
 
 
 			$result = $this->db->query($query);
@@ -159,7 +155,7 @@ class cotizacion{
 				if ($result) {
 				    // output data of each row
 				    while($row = $this->db->recorrer($result)) {
-				        $resp[] = array("año" => $row["ano"],"mes" => $row["mes"], "cantidad" => $row["cantidad"]);
+				        $resp[] = array("ano" => $row["ano"],"mes" => $row["mes"], "cantidad" => $row["cantidad"]);
 
 				        	/*"año" => $row["ano"], */
 				        //"id: " . $row["id_products"]. " descripcion: " . $row["descripcion"]. " precio" . $row["precio"];
@@ -397,6 +393,24 @@ class cotizacion{
 			}
 
 			return $resp;
+		}
+
+		public function facturasxmes(){
+			
+			$resp =array();
+			
+			$result = $this->db->query("SELECT DATE_FORMAT(fecha,'%Y') as ano, DATE_FORMAT(fecha,'%M') as mes, count(*) as cantidad FROM tbl_factura group by DATE_FORMAT(fecha,'%Y-%M') order by id_factura asc");
+
+				if ($result) {
+				    // output data of each row
+				    while($row = $this->db->recorrer($result)) {
+				        $resp[] = array("ano" => $row["ano"],"mes" => $row["mes"], "cantidad" => $row["cantidad"]);
+
+				    }
+				} else {
+				    $resp= false;
+				}
+				return $resp;
 		}
 	
 }

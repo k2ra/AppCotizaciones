@@ -1,17 +1,15 @@
 <?php
-//require ('C:\wamp\www\AppCotizaciones\Theme\bin\models.php');
-//include 'pdf_cotizacion.php';
+
 $models = new cotizacion();
+$numCotizacion = new NumCotizacion();
 
 if(isset($_SESSION['user'])) {
 	$valida =isset($_GET['mode'])? mysqli_real_escape_string(new Conexion(), $_GET['mode']) :  "";
 
-//$tabla = isset($_POST['dataTables1']) ? mysqli_real_escape_string(new Conexion(), $_POST['dataTables1']) :  "";
- //echo $_POST['1precio'];
+
 			if($_SERVER['REQUEST_METHOD'] == "POST"){
 				$id = isset($_POST['id']) ? mysqli_real_escape_string(new Conexion(), $_POST['id']) :  "";
 				$cliente = isset($_POST['txtCliente']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtCliente']) :  "";
-				$numcotiza	 = isset($_POST['txtNumcotiza']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtNumcotiza']) :  "";
 				$empresa= isset($_POST['txtEmpresa']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtEmpresa']) :  "";
 				$telefono= isset($_POST['txtTelefono']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtTelefono']) :  "";
 				$correo  = isset($_POST['txtCorreo']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtCorreo']) :  "";
@@ -19,40 +17,22 @@ if(isset($_SESSION['user'])) {
 				$impuesto= isset($_POST['txtitbms']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtitbms']) :  "";
 				$total  = isset($_POST['txttotal']) ? mysqli_real_escape_string(new Conexion(), $_POST['txttotal']) :  "";
 				$detalle=isset($_POST['table']);
-        $buscaCliente = isset($_POST['txtBuscaCliente']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtBuscaCliente']) :  "";
+        		$buscaCliente = isset($_POST['txtBuscaCliente']) ? mysqli_real_escape_string(new Conexion(), $_POST['txtBuscaCliente']) :  "";
 				$valida = isset($_POST['val']) ? mysqli_real_escape_string(new Conexion(), $_POST['val']) :  "";
 				//echo isset($_POST['table']);
 			} 
 
 			if(isset($_POST['table'])){
 
-				//echo $_POST['table']." ".$_POST['txtCliente'];
 				$detalle = $_POST['table'];
-			//$det = array();
-			
 
-//echo $valida;
-				/*echo $detalle;
-				print_r($det);
-				print_r($det[0]{'descripcion'});*/
 			}
 			//$valida = isset($_POST['val']) ? mysqli_real_escape_string(new Conexion(), $_POST['val']) :  "";
 			$res = $models->buscaProductos();
-
+			$numeroCotizacion = $numCotizacion->nuevoNumeroCotizacion();
 		//if ($_POST){
 			switch ($valida) {
 
-				case "dashboard": {
-				if($_POST){
-					header('Content-type: application/json');
-					$json = array($models->cotizacionesxmes());
-					
-					echo  json_encode($json);
-				}else{
-						include('html/dashboard.php');
-				}
-			
-				}break;
 				case "nueva": {
 
 						include('html/cotizacion.php');
@@ -65,9 +45,8 @@ if(isset($_SESSION['user'])) {
 					echo  json_encode($json);
 				}break;
 				case "insertaCot": {
-					echo $models->insertaCotizacion($numcotiza, $cliente, $empresa,$telefono,$correo, $subtotal, $impuesto, $total,$detalle);
-								//echo $reportcotizacion->reporte_cotizacion($numcotiza);
-								echo "Success";
+					$result= array($models->insertaCotizacion($numeroCotizacion, $cliente, $empresa,$telefono,$correo, $subtotal, $impuesto, $total,$detalle));
+					echo  json_encode($result);
 				}break;
 				case "search": {
 					$resp = $models->buscaDatosClie($buscaCliente);

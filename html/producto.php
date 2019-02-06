@@ -23,21 +23,23 @@
       <!--main content start-->
       <section id="main-content">
         <section class="wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-                 <h3 class="page-header">Nuevo Producto</h3>
-            </div>
+          <div class="row separacionPanel">
             <div class="col-lg-12">
               <div id ="msgNewProduct"></div>
                 <div id ="msgprod"></div>
-                    <div class="panel panel-primary">
+                    <div class="panel panel-info">
+                      <div class="panel-heading ">
+                          <div class="row panel-head" >
+                              <h3 class='col-md-6'>Nuevo Producto</h3>
+                          </div> 
+                      </div>
                       <div class="panel-body">
                         <h3 class="page-header"><small>Nuevo Producto</small></h3>
                         <div class="col-md-10 col-md-offset-2 centered">
                           <form class="form-horizontal" id="productos_form">
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtDescProd">Descripcion *</label>
+                                <label class="control-label label-fontSize" for="txtDescProd">Descripcion *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -51,7 +53,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtFechaProd">Fecha de creacion </label>
+                                <label class="control-label label-fontSize" for="txtFechaProd">Fecha de creacion </label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">
@@ -65,7 +67,7 @@
 
                             <div class="row">
                               <div class="col-md-2 form-group">
-                                <label class="control-label" for="txtPrecioProd">Precio *</label>
+                                <label class="control-label label-fontSize" for="txtPrecioProd">Precio *</label>
                               </div>  
                               <div class="col-md-4 form-group">
                                 <div class="controls input-group">

@@ -24,7 +24,7 @@
         <section id="main-content">
             <section class="wrapper">
 
-                    <div class="row" style='margin-top: 3%'>
+                    <div class="row separacionPanel" >
                     
                         <div class="col-lg-12">
                             <div id ="msg"></div>
@@ -49,7 +49,7 @@
                                                                                 <label class="control-label label-fontSize" for="txtCliente">Cliente</label>
                                                                                 
                                                                                 <div class="controls ">
-                                                                                <input class="form-control" name="txtCliente" id="txtCliente"  type="text" list="dlclient" required>
+                                                                                <input class="form-control ingresoDato" name="txtCliente" id="txtCliente"  type="text" list="dlclient" required>
                                                                                     
                                                                                     
                                                                                 </div>
@@ -60,7 +60,7 @@
                                                                                 <label class="control-label label-fontSize" for="txtNumcotiza"># Cotizacion</label>
                                                                                 
                                                                                 <div class="controls input-group">
-                                                                                <input class="form-control" name="txtCotizacion" id="txtCotizacion"  type="text" >
+                                                                                <input class="form-control ingresoDato" name="txtCotizacion" id="txtCotizacion"  type="text" >
                                                                                     
                                                                                     <span class="input-group-btn">
                                                                                         <a href="javascript:buscarCotizacion();" id="btnSearchClie"  class="btn btn-primary"><i class="fa fa-search"></i></a>
@@ -77,7 +77,7 @@
                                                                                 <div class="controls">
                                                                                 <!-- <select class="form-control"  name="txtEmpresa" id="txtEmpresa" required>
                                                                                 </select>-->
-                                                                                <input class="form-control" name="txtEmpresa" id="txtEmpresa" type="text" >
+                                                                                <input class="form-control ingresoDato" name="txtEmpresa" id="txtEmpresa" type="text" >
                                                                                                 
                                                                                 </div>
                                                                             </div>
@@ -85,7 +85,7 @@
                                                                                 <label class="control-label label-fontSize" for="txtTelefono">Telefono</label>
                                                                                 
                                                                                 <div class="controls input-group">
-                                                                                <input class="form-control" name="txtTelefono" id ="txtTelefono" type="tel" style="background-color : #FFFFFF; cursor: auto" placeholder="#telefono" data-toggle="popover" title="telefono no encontrado" data-content="Ir a la pestaña clientes y crear el cliente" data-placement="bottom"  required>
+                                                                                <input class="form-control ingresoDato" name="txtTelefono" id ="txtTelefono" type="tel" style="background-color : #FFFFFF; cursor: auto" placeholder="#telefono" data-toggle="popover" title="telefono no encontrado" data-content="Ir a la pestaña clientes y crear el cliente" data-placement="bottom"  required>
                                                                                     <div class="input-group-addon">
                                                                                         <i class="fa fa-phone"></i>
                                                                                     </div>	
@@ -96,7 +96,7 @@
                                                                                 <label class="control-label label-fontSize" for="txtCorreo">Correo</label>
                                                                                 
                                                                                 <div class="controls input-group">
-                                                                                <input class="form-control" name="txtCorreo" id="txtCorreo" type="email"   placeholder="Email" >
+                                                                                <input class="form-control ingresoDato" name="txtCorreo" id="txtCorreo" type="email"   placeholder="Email" >
                                                                                 <div class="input-group-addon">
                                                                                         <i class="fa fa-envelope"></i>
                                                                                     </div>
@@ -104,8 +104,8 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="row  control">
-                                                                                <input class="btn btn-success btn-md " name="btnagregar" id="btnagregar" type="button" value=" + Agregar Producto"  />
-                                                                                <a class="btn btn-primary btn-md" name="btnFacturar" id="btnFacturar" > <i class="fa fa-print"></i> Facturar</a> 
+                                                                                <input class="btn btn-success btn-md label-fontSize margenderecho" name="btnagregar" id="btnagregar" type="button" value=" + Agregar Producto"  />
+                                                                                <a class="btn btn-primary btn-md label-fontSize" name="btnFacturar" id="btnFacturar" > <i class="fa fa-print"></i> Facturar</a> 
                                 
                                                                         </div>
 
