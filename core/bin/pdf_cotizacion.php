@@ -7,7 +7,7 @@
 		
 				//unlink(filename,context)
 				$PHPJasperXML = new PHPJasperXML();
-				$PHPJasperXML->arrayParameter=array("numcotiza" => "'".$numcotiza."'");
+				$PHPJasperXML->arrayParameter=array("numcotiza" => "'".$numcotiza."'", "banner1" => REPORTE_BANNER_COTIZACION);
 				$PHPJasperXML->debugsql=false;
 				$PHPJasperXML->xml_dismantle($xml);
 	

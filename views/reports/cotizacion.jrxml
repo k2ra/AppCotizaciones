@@ -113,6 +113,7 @@ WHERE
 	<parameter name="numcotiza" class="java.lang.String">
 		<defaultValueExpression><![CDATA[$P{numcotiza}]]></defaultValueExpression>
 	</parameter>
+	<parameter name="banner1" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
 *,DATE_FORMAT(tbl_cotizaciones.`fecha_cotizacion`, "%d/%m/%Y") as fecha
@@ -173,7 +174,7 @@ cotizacion =$P{numcotiza}]]>
 		<band height="166" splitType="Stretch">
 			<image>
 				<reportElement x="3" y="2" width="550" height="159" uuid="ab0a75ed-14f9-4b4c-8092-27a4ca2f5d8e"/>
-				<imageExpression><![CDATA["C:\\wamp\\www\\AppCotizaciones\\Theme\\reports\\anmar.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$P{banner1}]]></imageExpression>
 			</image>
 			<rectangle>
 				<reportElement x="430" y="45" width="109" height="30" uuid="106bcbea-393c-4926-ba5a-4f9dd0876098"/>

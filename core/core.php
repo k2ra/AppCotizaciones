@@ -11,6 +11,7 @@ define('HTML_DIR','html/');
 define('APP_URL','http://'. $_SERVER['SERVER_NAME'].'/demos/AppCotizaciones/');
 //define('REPORTE_BANNER_FACTURA','http://'.$_SERVER['SERVER_NAME'].'/demos/AppCotizaciones/views/reports/anmar.jpg'); 
 define('REPORTE_BANNER_FACTURA','C:\\wamp3\\www\\demos\\AppCotizaciones\\views\\reports\\anmar.jpg'); 
+define('REPORTE_BANNER_COTIZACION','C:\\wamp3\\www\\demos\\AppCotizaciones\\views\\reports\\anmar.jpg'); 
 
 //define('APP_URL','http://'. $_SERVER['SERVER_NAME'].'/encuesta/');
 

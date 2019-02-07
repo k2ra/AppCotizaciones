@@ -249,18 +249,18 @@ class cotizacion{
 			$detallecot=array();
 			$fecha_actual = date("y-m-d");
 
-			$query = "INSERT INTO tbl_productos ( id_products, descripcion, precio, prod_fecha) VALUES ('h','$descripcion', '$precio','$fecha_actual')";
+			$query = "INSERT INTO tbl_productos ( descripcion, precio, prod_fecha) VALUES ('$descripcion', $precio,'$fecha_actual')";
 
 
 			if ($this->db->query($query)) {
-    			echo "Nuevo Producto agregado correctamente";
+    			$resp = true;
 			} else {
-   				echo "Error: " . $query . "<br>" . $this->db->error();
+   				$resp = false;
 			}
 
 			
 			$this->db->close();
-			
+			return $resp;
 
 		}
 

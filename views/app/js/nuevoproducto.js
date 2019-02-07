@@ -25,22 +25,29 @@ $(document).ready(function(){
 
 			$.ajax({
 
-					url: '?view=producto&mode=nuevo',//"./bin/controllers/productoController.php",
+					url: '?view=producto&mode=nuevo',
 					type: "POST",
 					data:  $('#productos_form').serialize() + "&val=newprod",
 					success: function(data) {
 					
 						console.log(data);
-						$("#msgNewProduct").html('<div class="alert alert-success"><b>:-)</b>'+" "+''+data+'.</div>');
-						$("#msgNewProduct").removeAttr("style");
-						setTimeout(function() {
-								$("#msgNewProduct").fadeOut(1500);
-								},3000);		
+						if(data == true){
+							$("#msgNewProduct").html('<div class="alert alert-success"><b>:-)</b>Producto insertado exitosamente.</div>');
+							$("#msgNewProduct").removeAttr("style");
+							 setTimeout(function() {
+									$("#msgNewProduct").fadeOut(1500);
+									},3000);		
+	
+	
+	
+							$('#txtDescProd').removeAttr("value");
+							$('#txtPrecioProd').removeAttr("value");
 
-
-
-						$('#txtDescProd').removeAttr("value");
-						$('#txtPrecioProd').removeAttr("value");
+						}
+						else{
+							$("#msgNewProduct").html('<div class="alert alert-danger"><b>:-)</b> Fallo en la insercion del producto favor vuelva a intentarlo</div>');
+							
+						}
 								
 							
 					},
