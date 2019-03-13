@@ -173,129 +173,95 @@ cotizacion =$P{numcotiza}]]>
 	<title>
 		<band height="166" splitType="Stretch">
 			<image>
-				<reportElement x="3" y="2" width="550" height="159" uuid="ab0a75ed-14f9-4b4c-8092-27a4ca2f5d8e"/>
+				<reportElement x="37" y="36" width="475" height="110" uuid="ab0a75ed-14f9-4b4c-8092-27a4ca2f5d8e"/>
 				<imageExpression><![CDATA[$P{banner1}]]></imageExpression>
 			</image>
-			<rectangle>
-				<reportElement x="430" y="45" width="109" height="30" uuid="106bcbea-393c-4926-ba5a-4f9dd0876098"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="430" y="14" width="109" height="31" backcolor="#0066CC" uuid="984ef6fd-9337-4c01-8a9b-380950c757e5"/>
-			</rectangle>
-			<textField>
-				<reportElement x="434" y="51" width="100" height="20" uuid="de70f521-cc93-48e3-912f-c5cc4faabede"/>
-				<textElement textAlignment="Center">
-					<font fontName="Lucida Sans" size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cotizacion}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="433" y="22" width="103" height="16" forecolor="#FFFFFF" backcolor="#0099CC" uuid="249fa282-97da-4300-8b90-b78f2f5090a5"/>
-				<textElement textAlignment="Center">
-					<font fontName="Lucida Sans" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[# Cotizacion:]]></text>
-			</staticText>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="132" splitType="Stretch">
-			<rectangle radius="10">
-				<reportElement x="3" y="3" width="550" height="129" uuid="b92eb649-1c86-4173-a8d5-98d70f464986"/>
-			</rectangle>
+		<band height="46" splitType="Stretch">
 			<textField>
-				<reportElement x="77" y="18" width="297" height="20" uuid="58f0d864-0294-4383-8009-c6dae618269e"/>
-				<textElement>
+				<reportElement x="59" y="26" width="79" height="20" uuid="58f0d864-0294-4383-8009-c6dae618269e"/>
+				<textElement verticalAlignment="Top">
 					<font fontName="Lucida Sans" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="77" y="61" width="297" height="20" uuid="3fb93267-b909-432e-b90e-8ad077bb53ca"/>
+				<reportElement x="228" y="26" width="84" height="20" uuid="3fb93267-b909-432e-b90e-8ad077bb53ca"/>
 				<textElement>
 					<font fontName="Lucida Sans" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="77" y="104" width="177" height="20" uuid="3fcba493-d297-42c1-ae54-7b14deb51c1c"/>
-				<textElement textAlignment="Justified">
-					<font fontName="Lucida Sans" size="14" isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="302" y="104" width="221" height="20" uuid="81b1e1cd-fad2-487b-88ea-5f5d1f11887a"/>
-				<textElement textAlignment="Justified">
-					<font fontName="Lucida Sans" size="14" isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="14" y="18" width="64" height="20" uuid="9efbfaf4-0a90-4b08-affc-5efd764b15a3"/>
+				<reportElement x="12" y="26" width="47" height="20" uuid="9efbfaf4-0a90-4b08-affc-5efd764b15a3"/>
 				<textElement textAlignment="Justified">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cliente:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="14" y="61" width="64" height="20" uuid="3f2c7e04-cc97-44ad-aa83-f0685eabbc6c"/>
+				<reportElement x="172" y="26" width="57" height="20" uuid="3f2c7e04-cc97-44ad-aa83-f0685eabbc6c"/>
 				<textElement textAlignment="Justified">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Empresa:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="14" y="104" width="63" height="20" uuid="05866753-3cd7-4dfe-80d5-1763fd9b59da"/>
-				<textElement textAlignment="Justified">
-					<font fontName="Lucida Sans" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Telefono:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="253" y="104" width="49" height="20" uuid="1ae03a58-dcb4-4334-a2a5-06c119aa7ba4"/>
-				<textElement textAlignment="Justified">
-					<font fontName="Lucida Sans" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Correo:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="379" y="17" width="80" height="21" forecolor="#000000" uuid="91b40956-5f7a-473a-a5ef-0cc40aa84351"/>
+				<reportElement x="328" y="25" width="44" height="21" forecolor="#000000" uuid="91b40956-5f7a-473a-a5ef-0cc40aa84351"/>
 				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Fecha : ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="459" y="18" width="100" height="20" uuid="3705c21a-59be-4d15-a438-72221e6e46ee"/>
+				<reportElement x="371" y="26" width="77" height="20" uuid="3705c21a-59be-4d15-a438-72221e6e46ee"/>
 				<textElement>
 					<font fontName="Lucida Sans" size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="452" y="10" width="78" height="16" forecolor="#333333" backcolor="#0099CC" uuid="249fa282-97da-4300-8b90-b78f2f5090a5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[# Cotizacion]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="26" width="94" height="20" uuid="de70f521-cc93-48e3-912f-c5cc4faabede"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cotizacion}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="48" splitType="Stretch">
+		<band height="32" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="17" width="555" height="31" backcolor="#0066CC" uuid="066057ee-a78d-493c-a689-258e34d2a96c"/>
+				<reportElement x="0" y="4" width="555" height="26" backcolor="#D3D3D3" uuid="066057ee-a78d-493c-a689-258e34d2a96c"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement x="14" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="f4498258-1a85-4b4e-8dc7-538d395cda9a"/>
+				<reportElement x="14" y="10" width="100" height="20" forecolor="#333333" uuid="f4498258-1a85-4b4e-8dc7-538d395cda9a"/>
 				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cantidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="228" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="4639387d-2d82-4d7d-a545-4c3b2144ba29"/>
+				<reportElement x="228" y="10" width="100" height="20" forecolor="#333333" backcolor="#333333" uuid="4639387d-2d82-4d7d-a545-4c3b2144ba29"/>
 				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Producto]]></text>
+				<text><![CDATA[Descripcion]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="449" y="23" width="100" height="20" forecolor="#FFFFFF" uuid="89cf0bc3-46fd-44fc-b149-508c8c1a803a"/>
+				<reportElement x="449" y="10" width="100" height="20" forecolor="#333333" backcolor="#333333" uuid="89cf0bc3-46fd-44fc-b149-508c8c1a803a"/>
 				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="14" isBold="true"/>
 				</textElement>
@@ -304,23 +270,23 @@ cotizacion =$P{numcotiza}]]>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="23" splitType="Stretch">
+		<band height="19" splitType="Stretch">
 			<textField>
-				<reportElement x="13" y="3" width="100" height="20" uuid="6b79ae0c-2cc8-439b-8ea0-94a69db00308"/>
+				<reportElement x="13" y="-1" width="100" height="20" uuid="6b79ae0c-2cc8-439b-8ea0-94a69db00308"/>
 				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="228" y="3" width="100" height="20" uuid="ccf05be2-cf60-457f-b916-75fe1209bb93"/>
-				<textElement>
+				<reportElement x="228" y="-1" width="100" height="20" uuid="ccf05be2-cf60-457f-b916-75fe1209bb93"/>
+				<textElement textAlignment="Center">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00">
-				<reportElement x="449" y="3" width="100" height="20" uuid="37a39fdd-761c-408c-aa63-6e4d93248ac1"/>
+				<reportElement x="449" y="-1" width="100" height="20" uuid="37a39fdd-761c-408c-aa63-6e4d93248ac1"/>
 				<textElement textAlignment="Right">
 					<font fontName="Lucida Sans" size="12"/>
 				</textElement>
@@ -331,7 +297,7 @@ cotizacion =$P{numcotiza}]]>
 	<columnFooter>
 		<band height="89" splitType="Stretch">
 			<textField pattern="###0.00">
-				<reportElement x="452" y="37" width="100" height="20" uuid="cff18bf3-7fa3-4d35-8e48-6726ba3e795a"/>
+				<reportElement x="474" y="37" width="78" height="20" uuid="cff18bf3-7fa3-4d35-8e48-6726ba3e795a"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
@@ -341,35 +307,35 @@ cotizacion =$P{numcotiza}]]>
 				<reportElement x="0" y="1" width="555" height="1" uuid="902b3c4a-77bc-4ff0-95f2-2efbd91bc047"/>
 			</line>
 			<staticText>
-				<reportElement x="371" y="37" width="75" height="20" uuid="45c0964a-b71f-47cd-b838-37dd999f9c13"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Lucida Sans" size="12"/>
+				<reportElement x="400" y="37" width="75" height="20" uuid="45c0964a-b71f-47cd-b838-37dd999f9c13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Lucida Sans" size="14"/>
 				</textElement>
 				<text><![CDATA[ITBMS :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="371" y="67" width="75" height="20" uuid="9f33bf08-6742-4800-8e47-a6cf542d69be"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Lucida Sans" size="12"/>
+				<reportElement x="400" y="67" width="75" height="20" uuid="9f33bf08-6742-4800-8e47-a6cf542d69be"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Lucida Sans" size="14"/>
 				</textElement>
 				<text><![CDATA[Total :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="371" y="7" width="75" height="20" uuid="e47b2bdc-ca61-4c61-ab6f-8ac5103e0df7"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Lucida Sans" size="12"/>
+				<reportElement x="400" y="7" width="75" height="20" uuid="e47b2bdc-ca61-4c61-ab6f-8ac5103e0df7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Lucida Sans" size="14"/>
 				</textElement>
 				<text><![CDATA[Subtotal :]]></text>
 			</staticText>
 			<textField pattern="###0.00">
-				<reportElement x="452" y="7" width="100" height="20" uuid="f676a00c-e66d-4dbb-a319-1a6ad6b8a492"/>
+				<reportElement x="474" y="7" width="78" height="20" uuid="f676a00c-e66d-4dbb-a319-1a6ad6b8a492"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{precio_1}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="452" y="67" width="100" height="20" uuid="6aab5527-a754-4404-ab5c-60fceaea0cb7"/>
+			<textField pattern="###0.00" isBlankWhenNull="false">
+				<reportElement x="474" y="67" width="78" height="20" uuid="6aab5527-a754-4404-ab5c-60fceaea0cb7"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Lucida Sans" size="12" isBold="true"/>
 				</textElement>
@@ -381,6 +347,6 @@ cotizacion =$P{numcotiza}]]>
 		<band height="54" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band height="1" splitType="Stretch"/>
 	</summary>
 </jasperReport>
